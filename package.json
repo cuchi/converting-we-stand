@@ -27,15 +27,72 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
+    "eslint": "^3.4.0",
+    "eslint-config-xo-react": "^0.9.0",
+    "eslint-plugin-react": "^6.2.0",
     "react-hot-loader": "^1.3.0",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "^1.15.1",
+    "xo": "^0.16.0"
   },
   "dependencies": {
     "babel-cli": "^6.14.0",
+    "eslint-config-xo-react": "^0.9.0",
+    "eslint-plugin-react": "^6.2.0",
     "material-ui": "^0.15.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-tap-event-plugin": "^1.0.0"
+  },
+  "xo": {
+    "extends": "xo-react",
+    "esnext": true,
+    "space": 4,
+    "rules": {
+      "react/require-optimization": [
+        "off"
+      ],
+      "react/jsx-boolean-value": [
+        "off"
+      ],
+      "xo/no-process-exit": [
+        "off"
+      ],
+      "react/jsx-closing-bracket-location": [
+        "error",
+        "line-aligned"
+      ],
+      "react/jsx-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "operator-linebreak": [
+        "error",
+        "before"
+      ],
+      "react/jsx-no-bind": [
+        "off"
+      ],
+      "babel/object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    },
+    "overrides": [
+      {
+        "files": "**/*.jsx",
+        "globals": [
+          "document"
+        ],
+        "rules": {
+          "xo/filename-case": [
+            "error",
+            {
+              "case": "pascalCase"
+            }
+          ]
+        }
+      }
+    ]
   }
 }
